@@ -6,6 +6,8 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
+using System.Data.Entity;
+using MainProject.Models;
 
 namespace MainProject
 {
@@ -16,6 +18,9 @@ namespace MainProject
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //set initialize the product data base if we chose to do it this way
+            //Database.SetInitializer(new ProductDatabaseInitializer());
         }
     }
 }

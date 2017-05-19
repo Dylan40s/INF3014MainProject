@@ -1,6 +1,19 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MainProject._Default" %>
+﻿<%@ Page Title="Welcome" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MainProject._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+
+    <div class ="menuItems">
+        <table class ="menuItems">
+            <tr>
+                <td>Heading 1</td>
+                <td>Heading 2</td>
+                <td>Heading 3</td>
+                <td>Heading 4</td>
+                <td>Contact Us</td>
+                <td>Cart</td>
+            </tr>
+        </table>
+    </div>
 
     <div class="jumbotron">
         <h1>ASP.NET</h1>
