@@ -42,6 +42,9 @@ namespace MainProject.Models
                     ImagePath = "v_neck.png",
                     UnitPrice = 100,
                     CategoryID = 1,
+                    Colour = "Black",
+                    Custom = true,
+
                 }
 
             };

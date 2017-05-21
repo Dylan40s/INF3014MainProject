@@ -64,41 +64,186 @@
         <div class="navbar">
             <div class="containerClass">
                 <a runat="server" href="~/">Home</a>
-                <a runat="server" href="~/Contact">Contact</a>
                 <div class="clothsDropdown">
                     <button class="clothsbtn" >Cloths</button>
                     <div class="clothsDropdown-content" id="clothsDropDownID">
+                        <table>
+                            <tr>
+                                <td style="width:10%; "> 
+                                    <h3 style="color:black">Clothes</h3>
+                                    <a href="#">Link 1</a>
+                                    <a href="#">Link 2</a>
+                                     <a href="#">Link 3</a> 
+
+                                </td>
+                                <td style="width:30%; "> 
+                                    <ul style="list-style-type:none;">
+                                        <li>
+                                            <a href="#"><img src="/Images/testFile.jpg" alt="Show this" style="width:40%; height:40%; position:relative" /></a> 
+                                        </li>
+                                        <li><p style="text-align:center;color:black">Hold \n R100</p></li>
+                                    </ul>
+                                   
+
+                                </td>
+                                 <td style="width:30%; "> 
+                                    <ul style="list-style-type:none;">
+                                        <li>
+                                            <a href="#"><img src="/Images/testFile.jpg" alt="Show this" style="width:40%; height:40%; position:relative" /></a> 
+                                        </li>
+                                        <li> <p style="text-align:center;color:black">Hold \n R100</p></li>
+                                    </ul>
+                                   
+
+                                </td>
+                                 <td style="width:30%; "> 
+                                    <ul style="list-style-type:none;">
+                                        <li>
+                                            <a href="#"><img src="/Images/testFile.jpg" alt="Show this" style="width:40%; height:40%; position:relative" /></a> 
+                                        </li>
+                                        <li> <p style="text-align:center;color:black">Hold \n R100</p></li>
+                                    </ul>
+                                   
+
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        
+                      
+                    </div> 
+                </div>
+                    <!--second style-->
+                <div class="homeDropdown">
+                    <button class="homebtn" >Homeware</button>
+                    <div class="homeDropdown-content" >
+                        <!--<table cellspacing="50">
+                            <tr>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    <p style="color:black">Images shoudl be here</p>
+                                    <img src="/Images/testFile.jpg" alt="Gello test imagee" style="width:120px;height:400px"; />
+                                    
+                                </td>
+                            </tr>
+                        </table> -->
                       <a href="#">Link 1</a>
-                      <a href="#">Link 2</a>
-                      <a href="#">Link 3</a>
+                                      <a href="#">Link 2</a>
+                                      <a href="#">Link 3</a>
                     </div>
                 </div>
+                <div class="stationaryDropdown">
+                    <button class="statbtn" >Stationary</button>
+                    <div class="stationaryDropdown-content" >
+                        <!--<table cellspacing="50">
+                            <tr>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    <p style="color:black">Images shoudl be here</p>
+                                    <img src="/Images/testFile.jpg" alt="Gello test imagee" style="width:120px;height:400px"; />
+                                    
+                                </td>
+                            </tr>
+                        </table> -->
+                      <a href="#">Link 1</a>
+                                      <a href="#">Link 2</a>
+                                      <a href="#">Link 3</a>
+                    </div>
+                </div>
+                <div class="genDropdown">
+                    <button class="genbtn" >General</button>
+                    <div class="genDropdown-content" >
+                        <!--<table cellspacing="50">
+                            <tr>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    <p style="color:black">Images shoudl be here</p>
+                                    <img src="/Images/testFile.jpg" alt="Gello test imagee" style="width:120px;height:400px"; />
+                                    
+                                </td>
+                            </tr>
+                        </table> -->
+                      <a href="#">Link 1</a>
+                                      <a href="#">Link 2</a>
+                                      <a href="#">Link 3</a>
+                    </div>
+                </div>
+                <a runat="server" href="~/Contact">Contact</a>
             </div>
+            
         </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <div class="footerContainer">
+                    <table class="footerTable">
+                        <tr>
+                            <td>
+                                
+                                <ul style="list-style-type: none;">
+                                    <li><h3>Visit our pages</h3></li>
+                                    <li><div class ="smPins" style="padding-left:20px;"> 
+                                            <table  >
+                                                <tr>
+                                                    <td style="padding-right:10px">
+                                                        <a href=""><img src="/Images/facebook.png" alt="facebook" style="width:30px;height:30px"; /></a>
+                                                    </td>
+                                                    <td style="padding-right:10px">
+                                                         <a href=""><img src="/Images/twitter.png" alt="Twitter" style="width:30px;height:30px"; /></a>
+                                                    </td>
+                                                    <td>
+                                                        <a href=""><img src="/Images/instagram.png" alt="Instagram" style="width:30px;height:30px"; /></a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </li>
+                                </ul> 
+                            </td>
+                            <td>
+                                <ul style="list-style-type: none;">
+                                    <li><h3>Contact us</h3></li>
+                                    <li>Test</li>
+                                    <li>tse</li>
+                                    <li>stre</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul style="list-style-type: none;">
+                                    <li><h3>Useful links</h3></li>
+                                    <li>set</li>
+                                    <li>set</li>
+                                    <li>est</li>
+                                </ul>
+
+                            </td>
+                            <td>
+                                <ul style="list-style-type: none;">
+                                    <li><h3>Shopping</h3></li>
+                                    <li>set</li>
+                                    <li>set</li>
+                                    <li>ste</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        
+                        
+                    </table>
+                </div>
             </footer>
         </div>
 
     </form>
 </body>
 <script>
-//function clothsDropdown() {
-//    document.getElementById("clothsDropDownID").classList.toggle("show");
-//}
 
-// Close the dropdown if the user clicks outside of it
-/*window.onclick = function(e) {
-if (!e.target.matches('.clothsbtn')) {
-    var myDropdown = document.getElementById("clothsDropDownID");
-      if (myDropdown.classList.contains('show')) {
-        myDropdown.classList.remove('show');
-      }
-  }
-}*/
 </script>
 </html>

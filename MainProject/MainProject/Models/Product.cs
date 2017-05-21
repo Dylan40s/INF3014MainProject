@@ -28,5 +28,11 @@ namespace MainProject.Models
         public double? UnitPrice{get; set;}
         public int? CategoryID { get; set; }
         public virtual Category Cateory { get; set; }
+
+        [Required,StringLength(1), Display(Name = "Colour"), DataType(DataType.Text) ]
+        public string Colour { get; set; }
+
+        [Required, Display(Name = "Custom") ]
+        public bool? Custom { get; set; }
     }
 }
