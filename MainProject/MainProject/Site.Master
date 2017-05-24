@@ -71,7 +71,7 @@
                             <tr>
                                 <td style="width:10%; "> 
                                     <h3 style="color:black">Clothes</h3>
-                                    <a href="#">Link 1</a>
+                                    <a runat="server" href="~/ProductShow">Products</a>
                                     <a href="#">Link 2</a>
                                      <a href="#">Link 3</a> 
 

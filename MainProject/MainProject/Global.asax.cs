@@ -20,7 +20,26 @@ namespace MainProject
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             //set initialize the product data base if we chose to do it this way
-            //Database.SetInitializer(new ProductDatabaseInitializer());
+            Database.SetInitializer(new ProductDatabaseInitializer());
+            RegisterCustomRoutes(RouteTable.Routes);
         }
+        void RegisterCustomRoutes(RouteCollection routes)
+        {
+            routes.MapPageRoute(
+            "ProductsByCategoryRoute",
+            "Category/{categoryName}",
+            "~/ProductShow.aspx"
+            );
+            routes.MapPageRoute(
+            "ProductByNameRoute",
+            "Product/{productName}",
+            "~/ProductShow.aspx"
+            );
+            routes.MapPageRoute(
+            "ProductFilter",
+            "Product/{productName}",
+            "~/ProductShow.aspx"
+            );
+        }
     }
 }

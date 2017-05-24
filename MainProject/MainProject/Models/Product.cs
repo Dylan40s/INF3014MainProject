@@ -27,7 +27,7 @@ namespace MainProject.Models
         // ? used as it signals that it can be null or a double
         public double? UnitPrice{get; set;}
         public int? CategoryID { get; set; }
-        public virtual Category Cateory { get; set; }
+        public virtual Category Category { get; set; }
 
         [Required,StringLength(1), Display(Name = "Colour"), DataType(DataType.Text) ]
         public string Colour { get; set; }

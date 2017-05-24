@@ -8,7 +8,7 @@ namespace MainProject.Models
 {
     public class ProductContext : DbContext
     {
-        public ProductContext() : base("MainProject"/*name goes in here*/) { }
+        public ProductContext() : base("MainProject") { }
         public DbSet<Category> Catergories { get; set; }
         public DbSet<Product> Products { get; set; }
     }
