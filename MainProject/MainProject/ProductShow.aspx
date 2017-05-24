@@ -2,24 +2,18 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="Content/ProductPage.css" rel="stylesheet" />
-    <table style="width:100%; height:100%" >
+    <table style="width: 100%; height: 100%">
         <tr>
-            <td style="width:20%;">
+            <td style="width: 20%;">
                 <div class="nonScrollable">
-                    <p><h3>Filter</h3></p>
-                    <ul>
-                        <li>
-                            <a href="<%#: GetRouteUrl("ProductsByCategoryRoute", new {categoryName = "Shirts"}) %>">
-                        click here
-                            </a>
-                        </li>
-                    </ul>
+                    Hello   
                 </div>
             </td>
-            <td style="width:80%;">
+
+            <td style="width: 80%;">
                 <div class="productScroll">
                     <asp:ListView ID="productList" runat="server" DataKeyNames="ProductID" GroupItemCount="4" ItemType="MainProject.Models.Product" SelectMethod="GetProducts">
-                        
+
                         <EmptyDataTemplate>
                             <table>
                                 <tr>
@@ -33,7 +27,7 @@
                             </tr>
                         </GroupTemplate>
                         <ItemTemplate>
-                            
+
                             <td runat="server">
                                 <table class="productTable">
                                     <tr>
@@ -46,13 +40,12 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        
+
                                         <td>
                                             <!-- this should have href thing here by product name -->
                                             <image src='Images/<%#:Item.ImagePath%>' width="150" height="300" border="1" />
-                                            <a href="<%#: GetRouteUrl("ProductsByCategoryRoute", new {categoryName = "Shirts"}) %>">
-                        click here
-                            </a>
+                                            <a href="<%#: GetRouteUrl("ProductsByCategoryRoute", new {categoryName = "Shirts"}) %>">click here
+                                            </a>
                                         </td>
                                     </tr>
                                     <tr>
