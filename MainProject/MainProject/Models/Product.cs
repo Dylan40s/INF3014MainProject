@@ -18,7 +18,8 @@ namespace MainProject.Models
 
         [Required, StringLength(100), Display(Name = "Name")]
         public string ProductName { get; set; }
-
+        [Required, StringLength(100), Display(Name = "ProductSearch")]
+        public string ProductSearch { get; set; }
         [Required, StringLength(10000), Display(Name = "Product description"), DataType(DataType.MultilineText)]
         public string Description { get; set; }
         public string ImagePath { get; set; }

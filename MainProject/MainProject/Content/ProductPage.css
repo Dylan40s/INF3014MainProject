@@ -45,3 +45,29 @@
     border-color:red;
 }
 
+.productScrollList {
+    position: fixed;
+}
+
+.imageLocation {
+    padding: 20px;
+}
+
+.topImage {
+   z-index: 1; 
+   position: relative;
+}
+.moveableImg {
+    z-index: 2;
+    padding: 10px;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: dashed;
+    border-color: red;
+    display: block;
+    resize:both;
+}
+
+
+

@@ -24,7 +24,26 @@ namespace MainProject.Models
                 new Category
                 {
                     CategoryID = 1,
-                    CategoryName = "Shirt"
+                    CategoryName = "Clothes",
+                    Description ="Clothes of any kind"
+                },
+                new Category
+                {
+                    CategoryID = 2,
+                    CategoryName = "Homeware",
+                    Description ="Products to be used at home"
+                },
+                new Category
+                {
+                    CategoryID = 3,
+                    CategoryName = "Stationery",
+                    Description ="Products to use at the office"
+                },
+                new Category
+                {
+                    CategoryID = 4,
+                    CategoryName = "General",
+                    Description ="General products"
                 },
             };
             return categories;
@@ -37,12 +56,13 @@ namespace MainProject.Models
                 new Product
                 {
                     ProductID = 1,
-                    ProductName = "V-Neck",
-                    Description = "V-Neck, colour",
-                    ImagePath = "v_neck.png",
+                    ProductName = "vNeck",
+                    ProductSearch = "Shirts",
+                    Description = "V Neck",
+                    ImagePath = "vNeck.png",
                     UnitPrice = 100,
                     CategoryID = 1,
-                    Colour = "Black",
+                    Colour = "B",
                     Custom = true,
 
                 }
