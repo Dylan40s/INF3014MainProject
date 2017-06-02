@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Diagnostics;
+using MainProject.Models;
+using System.Web.ModelBinding;
+using System.Web.UI.HtmlControls;
 
 namespace MainProject
 {
@@ -14,6 +17,20 @@ namespace MainProject
         {
 
         }
+        public IQueryable<Product> GetProduct()
+        {
+            var _db = new MainProject.Models.ProductContext();
+            IQueryable<Product> query = _db.Products;
+            return query;
+        }
+
+        public IQueryable<Category> getCatagoy()
+        {
+            var _db = new MainProject.Models.ProductContext();
+            IQueryable<Category> query = _db.Catergories;
+            return query;
+        }
+
 
     }
 }

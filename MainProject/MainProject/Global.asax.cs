@@ -27,17 +27,17 @@ namespace MainProject
         {
             routes.MapPageRoute(
             "ProductsByCategoryRoute",
-            "Category/{categoryName}",
+            "Product/{categoryName}",
             "~/ProductShow.aspx"
             );
             routes.MapPageRoute(
             "ProductByNameRoute",
             "Product/{productName}",
-            "~/ProductShow.aspx"
+            "~/ProductDetails.aspx"
             );
             routes.MapPageRoute(
             "ProductFilter",
-            "Product/{productName}",
+            "Product/{productSearch}",
             "~/ProductShow.aspx"
             );
         }
