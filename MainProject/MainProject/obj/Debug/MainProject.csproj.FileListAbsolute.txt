@@ -130,3 +130,6 @@ C:\Users\User\Dropbox\third year\INF3014F\MainProject\MainProject\MainProject\bi
 C:\Users\User\Dropbox\third year\INF3014F\MainProject\MainProject\MainProject\obj\Debug\MainProject.csprojResolveAssemblyReference.cache
 C:\Users\User\Dropbox\third year\INF3014F\MainProject\MainProject\MainProject\obj\Debug\MainProject.dll
 C:\Users\User\Dropbox\third year\INF3014F\MainProject\MainProject\MainProject\obj\Debug\MainProject.pdb
+C:\Users\trist\Documents\INF3014MainProject\MainProject\MainProject\obj\Debug\MainProject.csprojResolveAssemblyReference.cache
+C:\Users\trist\Documents\INF3014MainProject\MainProject\MainProject\obj\Debug\MainProject.dll
+C:\Users\trist\Documents\INF3014MainProject\MainProject\MainProject\obj\Debug\MainProject.pdb
