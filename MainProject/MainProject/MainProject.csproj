@@ -136,6 +136,8 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\contentJS.php" />
+    <Content Include="Content\controlJS.js" />
     <Content Include="Content\detailPage.css" />
     <Content Include="Content\mainPage.css" />
     <Content Include="Content\ProductPage.css" />

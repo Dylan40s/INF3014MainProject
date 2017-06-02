@@ -74,13 +74,13 @@
                     <div class="containerClass">
                         <a runat="server" href="~/">Home</a>
                         <div class="clothsDropdown">
-                            <button class="clothsbtn" >Cloths</button>
+                            <button class="clothsbtn" ><a href="ProductShow.aspx?CategoryID=1">Cloths</a></button>
                             <div class="clothsDropdown-content" id="clothsDropDownID">
                                 <table>
                                     <tr>
                                             <h3 style="color:black">Clothes</h3>
                                         <td style="width:10%; "> 
-                                           <a href="ProductShow.aspx?CategoryID=1">All clothes</a>
+                                           
                                              <a href="ProductShow.aspx?ProductSearch=Shirts">Shirts</a>
                                             <a href="ProductShow.aspx?ProductSearch=Pants">Pants</a>
                                             <a href="ProductShow.aspx?ProductSearch=Hoodie">Hoodie</a>
@@ -125,63 +125,144 @@
                         </div>
                             <!--second style-->
                         <div class="homeDropdown">
-                            <button class="homebtn" >Homeware</button>
+                            <button class="homebtn" ><a href="ProductShow.aspx?CategoryID=2">Homeware</a></button>
                             <div class="homeDropdown-content" >
-                                <!--<table cellspacing="50">
+                                 <table>
                                     <tr>
-                                        <td>
-                                    
+                                            <h3 style="color:black">Homeware</h3>
+                                        <td style="width:10%; "> 
+                                           
+                                             <a href="ProductShow.aspx?ProductSearch=Shirts">Pillows</a>
+                                            <a href="ProductShow.aspx?ProductSearch=Mugs">Mugs</a>
+                                            <a href="ProductShow.aspx?ProductSearch=Glasses">Glasses</a>
+
                                         </td>
-                                        <td>
-                                            <p style="color:black">Images shoudl be here</p>
-                                            <img src="/Images/testFile.jpg" alt="Gello test imagee" style="width:120px;height:400px"; />
-                                    
+                                        <td style="width:30%; "> 
+                                            <ul style="list-style-type:none;">
+                                                <li>
+                                                   <a href="ProductDetails.aspx?ProductName=vNeck"><img src="/Images/testFile.jpg" alt="Show this" style="width:40%; height:40%; position:relative" /></a>
+                                                </li>
+                                                <li><p style="text-align:center;color:black">Hold \n R100</p></li>
+                                            </ul>
+                                   
+
+                                        </td>
+                                         <td style="width:30%; "> 
+                                            <ul style="list-style-type:none;">
+                                                <li>
+                                                    <a href="#"><img src="/Images/testFile.jpg" alt="Show this" style="width:40%; height:40%; position:relative" /></a> 
+                                                </li>
+                                                <li> <p style="text-align:center;color:black">Hold \n R100</p></li>
+                                            </ul>
+                                   
+
+                                        </td>
+                                         <td style="width:30%; "> 
+                                            <ul style="list-style-type:none;">
+                                                <li>
+                                                    <a href="#"><img src="/Images/testFile.jpg" alt="Show this" style="width:40%; height:40%; position:relative" /></a> 
+                                                </li>
+                                                <li> <p style="text-align:center;color:black">Hold \n R100</p></li>
+                                            </ul>
+                                   
+
                                         </td>
                                     </tr>
-                                </table> -->
-                              <a href="#">Link 1</a>
-                                              <a href="#">Link 2</a>
-                                              <a href="#">Link 3</a>
+                                </table>
                             </div>
                         </div>
                         <div class="stationaryDropdown">
-                            <button class="statbtn" >Stationary</button>
+                            <button class="statbtn" ><a href="ProductShow.aspx?CategoryID=3">Stationery</a></button>
                             <div class="stationaryDropdown-content" >
-                                <!--<table cellspacing="50">
+                                 <table>
                                     <tr>
-                                        <td>
-                                    
+                                            <h3 style="color:black">Stationary</h3>
+                                        <td style="width:10%; "> 
+                                           
+                                             <a href="ProductShow.aspx?ProductSearch=Pens">Pens</a>
+                                            <a href="ProductShow.aspx?ProductSearch=Flash">Flash drivers</a>
+                                            <a href="ProductShow.aspx?ProductSearch=Mouse">Mouse pads</a>
+
                                         </td>
-                                        <td>
-                                            <p style="color:black">Images shoudl be here</p>
-                                            <img src="/Images/testFile.jpg" alt="Gello test imagee" style="width:120px;height:400px"; />
-                                    
+                                        <td style="width:30%; "> 
+                                            <ul style="list-style-type:none;">
+                                                <li>
+                                                   <a href="ProductDetails.aspx?ProductName=vNeck"><img src="/Images/testFile.jpg" alt="Show this" style="width:40%; height:40%; position:relative" /></a>
+                                                </li>
+                                                <li><p style="text-align:center;color:black">Hold \n R100</p></li>
+                                            </ul>
+                                   
+
+                                        </td>
+                                         <td style="width:30%; "> 
+                                            <ul style="list-style-type:none;">
+                                                <li>
+                                                    <a href="#"><img src="/Images/testFile.jpg" alt="Show this" style="width:40%; height:40%; position:relative" /></a> 
+                                                </li>
+                                                <li> <p style="text-align:center;color:black">Hold \n R100</p></li>
+                                            </ul>
+                                   
+
+                                        </td>
+                                         <td style="width:30%; "> 
+                                            <ul style="list-style-type:none;">
+                                                <li>
+                                                    <a href="#"><img src="/Images/testFile.jpg" alt="Show this" style="width:40%; height:40%; position:relative" /></a> 
+                                                </li>
+                                                <li> <p style="text-align:center;color:black">Hold \n R100</p></li>
+                                            </ul>
+                                   
+
                                         </td>
                                     </tr>
-                                </table> -->
-                              <a href="#">Link 1</a>
-                                              <a href="#">Link 2</a>
-                                              <a href="#">Link 3</a>
+                                </table>
                             </div>
                         </div>
                         <div class="genDropdown">
-                            <button class="genbtn" >General</button>
+                            <button class="genbtn" ><a href="ProductShow.aspx?CategoryID=4">General</a></button>
                             <div class="genDropdown-content" >
-                                <!--<table cellspacing="50">
+                                <table>
                                     <tr>
-                                        <td>
-                                    
+                                            <h3 style="color:black">General</h3>
+                                        <td style="width:10%; "> 
+                                           
+                                             <a href="ProductShow.aspx?ProductSearch=Shirts">Shirts</a>
+                                            <a href="ProductShow.aspx?ProductSearch=Pants">Pants</a>
+                                            <a href="ProductShow.aspx?ProductSearch=Hoodie">Hoodie</a>
+
                                         </td>
-                                        <td>
-                                            <p style="color:black">Images shoudl be here</p>
-                                            <img src="/Images/testFile.jpg" alt="Gello test imagee" style="width:120px;height:400px"; />
-                                    
+                                        <td style="width:30%; "> 
+                                            <ul style="list-style-type:none;">
+                                                <li>
+                                                   <a href="ProductDetails.aspx?ProductName=vNeck"><img src="/Images/testFile.jpg" alt="Show this" style="width:40%; height:40%; position:relative" /></a>
+                                                </li>
+                                                <li><p style="text-align:center;color:black">Hold \n R100</p></li>
+                                            </ul>
+                                   
+
+                                        </td>
+                                         <td style="width:30%; "> 
+                                            <ul style="list-style-type:none;">
+                                                <li>
+                                                    <a href="#"><img src="/Images/testFile.jpg" alt="Show this" style="width:40%; height:40%; position:relative" /></a> 
+                                                </li>
+                                                <li> <p style="text-align:center;color:black">Hold \n R100</p></li>
+                                            </ul>
+                                   
+
+                                        </td>
+                                         <td style="width:30%; "> 
+                                            <ul style="list-style-type:none;">
+                                                <li>
+                                                    <a href="#"><img src="/Images/testFile.jpg" alt="Show this" style="width:40%; height:40%; position:relative" /></a> 
+                                                </li>
+                                                <li> <p style="text-align:center;color:black">Hold \n R100</p></li>
+                                            </ul>
+                                   
+
                                         </td>
                                     </tr>
-                                </table> -->
-                              <a href="#">Link 1</a>
-                                              <a href="#">Link 2</a>
-                                              <a href="#">Link 3</a>
+                                </table>
                             </div>
                         </div>
                         <a runat="server" href="~/Contact">Contact</a>
