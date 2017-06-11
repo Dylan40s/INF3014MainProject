@@ -22,8 +22,9 @@
         font-size: 16px;
         border: none;
         outline: none;
-        color: white;
         padding: 14px 16px;
+        color: white;
+
         background-color: #333;
     }
 
@@ -36,7 +37,7 @@
     background-color: #333;
 }
 
-    .containerClass a:hover, .clothsDropdown:hover .clothsbtn, .homeDropdown:hover .homebtn, .stationaryDropdown:hover .statbtn, .genDropdown:hover .genbtn {
+    .containerClass a:hover, .clothsDropdown .clothsbtn:hover, .homeDropdown .homebtn:hover, .stationaryDropdown .statbtn:hover, .genDropdown .genbtn:hover {
         background-color: red;
     }
 
@@ -49,12 +50,13 @@
     position: absolute;
     left: 0;
     right: 0;
+    
 }
 
     .clothsDropdown-content a, .homeDropdown-content a, .stationaryDropdown-content a, .genDropdown-content a {
         float: none;
         color: black;
-        padding: 12px 16px;
+        padding: 14px 16px;
         text-decoration: none;
         display: block;
         text-align: left;

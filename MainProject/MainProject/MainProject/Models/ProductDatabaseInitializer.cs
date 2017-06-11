@@ -12,7 +12,8 @@ namespace MainProject.Models
     {
         protected override void Seed(ProductContext context)
         {
-            
+            GetCategory().ForEach(c => context.Catergories.Add(c));
+            GetProducts().ForEach(p => context.Products.Add(p));
         }
 
         private static List<Category> GetCategory()

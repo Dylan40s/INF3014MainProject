@@ -11,5 +11,8 @@ namespace MainProject.Models
         public ProductContext() : base("MainProject") { }
         public DbSet<Category> Catergories { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<CartItem> ShoppingCartItems { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
     }
 }

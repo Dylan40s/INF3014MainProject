@@ -3,14 +3,29 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="~/Content/ProductPage.css" rel="stylesheet" runat="server" />
     
-    <table style="width:100%">
+    <table id="tableID" style="width:100%" >
         <tr>
-            <td style="width:30%">
-                <form>
-                     Points:
-                    <input id="filterScale" type ="range" min ="100" max="1000" step ="50" value ="1000" onChange="myFunction()"/>
-                    <input id="textScale" type="text" value="1000" />
-                </form>
+            <td style="width:30%" runat="server" id="scaleID">
+                    <h4>Category</h4>
+                    <asp:RadioButtonList ID="categorySelect" runat="server">
+                        <asp:ListItem Text="Clothing" Value="1" />
+                        <asp:ListItem Text="Houseware" Value="2" />
+                        <asp:ListItem Text="Stationery" Value="3" />
+                        <asp:ListItem Text="Specials" Value="4" />
+                    </asp:RadioButtonList>
+                     <h4>Price</h4>
+                    <input id="filterScale" type ="range" min ="10" max="1000" step ="50" value ="1000" onChange="myFunction()"/>
+                    <asp:TextBox ID="textScale" runat="server" Visible="True" Text="<1000"></asp:TextBox>
+                    <h4>Colour</h4>
+                <asp:RadioButtonList ID="colourSelect" runat="server">
+                        <asp:ListItem Text="Blue" Value="1" />
+                        <asp:ListItem Text="Red" Value="2" />
+                        <asp:ListItem Text="Black" Value="3" />
+                        <asp:ListItem Text="Green" Value="4" />
+                        <asp:ListItem Text="White" Value="3" />
+                        <asp:ListItem Text="Other" Value="4" />
+                    </asp:RadioButtonList>
+                <asp:Button class="FilterButton" runat="server" onclick="applyFilters" Text="Apply filter" ClientIDMode="Static"></asp:Button>
             </td>
             <td style="width:70%">
                 <asp:ListView ID="productList" runat="server" DataKeyNames="ProductID" GroupItemCount="4" ItemType="MainProject.Models.Product" SelectMethod="GetProducts">
@@ -83,7 +98,10 @@
 
 <script type="text/javascript">
     function myFunction() {
-        document.getElementById("textScale").value = document.getElementById("filterScale").value;
+        MyTextBox = document.getElementById("<%= textScale.ClientID %>");
+        //alert(MyTextBox.value);
+
+        MyTextBox.value = "<" + document.getElementById("filterScale").value;
         
     }
     </script>

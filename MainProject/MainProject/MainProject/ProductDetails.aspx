@@ -11,7 +11,7 @@
             <table>
                 <tr>
                     <td>
-                        <img src="../Images/<%#:Item.ImagePath %>" style="border: solid; width: 200px; height: 300px" alt="~/Images/<%#:Item.ImagePath %>" />
+                        <img src="../Images/<%#:Item.ImagePath %>" style="border: solid; width: 200px; height: 300px" alt="~/Images/<%#:Item.ImagePath %>"  />
                     </td>
                     <td>&nbsp;</td>
                     <td style="vertical-align: top; text-align: left;">
@@ -26,6 +26,12 @@
                             <b>Product Number:</b>&nbsp;<%#:Item.ProductID %>
                         </span>
                         <br />
+                        <a
+href="/AddToCart.aspx?productID=<%#:Item.ProductID %>">
+                            <span class="ProductListItem">
+                                 <b>Add To Cart<b>
+                            </span>
+                        </a>
                         <span>
                             <p>
                                 Quantity
@@ -45,33 +51,16 @@
                         <br />
                         <asp:Image ImageUrl="placeholder" ID="imagePlaceHolder" runat="server" Style="height: 150px; width: 150px;" AlternateText="No image selected" />
                     </td>
-                    <td>
+                    <td runat="server" id="helpTD">
                         <div class="helpContainer">
                             <button class="helpBtn">Help</button>
-                            <div class="helpContainer-content">
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <h4>Clothing examples</h4>
-                                            <img src="Images/ClothsExample.png" alt="Clothing example" class="exampleImages" />
-                                        </td>
-                                        <td>
-                                            <h4>Homeware examples</h4>
-                                            <img src="Images/HomewareExample.png" alt="Clothing example" class="exampleImages"  />
-                                        </td>
-                                       
-                                    </tr>
-                                    <tr>
-                                         <td>
-                                            <h4>Stationery examples</h4>
-                                            <img src="Images/StationeryExample.png" alt="Clothing example" class="exampleImages" />
-                                        </td>
-                                        <td>
-                                            <h4>General examples</h4>
-                                            <img src="Images/GeneralExample.png" alt="Clothing example" class="exampleImages" />
-                                        </td>
-                                    </tr>
-                                </table>
+                            <div class="helpContainer-content" >
+
+                                <asp:Label runat="server" Text="" ID="helpText"></asp:Label>
+                                <br />
+                                <asp:Image runat="server" ImageUrl="wrong" ID="helpImage" OnLoad="<%#helpImageSelect(Item.CategoryID ?? default(int))%>" /> 
+
+                            
                             </div>
                         </div>
                         <br />
@@ -85,4 +74,7 @@
             </table>
         </ItemTemplate>
     </asp:FormView>
+    <script type="text/javascript">
+      
+    </script>
 </asp:Content>

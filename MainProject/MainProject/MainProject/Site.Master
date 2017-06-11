@@ -61,26 +61,24 @@
                 </div>
             </div>
         </div>-->
-        <asp:FormView ID="productDetail" runat="server" ItemType="MainProject.Models.Product" SelectMethod="GetProduct" RenderOuterTable="false">
-            <EmptyDataTemplate>
-            <table>
-                <tr>
-                    <td>No data was returned.</td>
-                </tr>
-            </table>
-        </EmptyDataTemplate>
-            <ItemTemplate>
+        <div id="login_bar" style="text-align: right" >                                               
+            <ul id="login_signup" style="display: inline; color : white" >
+
+                <li><a href="#" id="login_link">Login </a></li>
+                <li><a href="#" id="sign_link">SignUp </a></li>
+            </ul>
+        </div>
                 <div class="navbar">
                     <div class="containerClass">
-                        <a runat="server" href="~/">Home</a>
+                        <a runat="server" href="~/">Home</a>>
                         <div class="clothsDropdown">
-                            <button class="clothsbtn" ><a href="ProductShow.aspx?CategoryID=1">Cloths</a></button>
+                            <a class="clothsbtn" href="ProductShow.aspx?CategoryID=1">Cloths</a>
                             <div class="clothsDropdown-content" id="clothsDropDownID">
                                 <table>
                                     <tr>
-                                            <h3 style="color:black">Clothes</h3>
+                                            
                                         <td style="width:10%; "> 
-                                           
+                                           <h3 style="color:black">Clothing</h3>
                                              <a href="ProductShow.aspx?ProductSearch=Shirts">Shirts</a>
                                             <a href="ProductShow.aspx?ProductSearch=Pants">Pants</a>
                                             <a href="ProductShow.aspx?ProductSearch=Hoodie">Hoodie</a>
@@ -89,7 +87,7 @@
                                         <td style="width:30%; "> 
                                             <ul style="list-style-type:none;">
                                                 <li>
-                                                   <a href="ProductDetails.aspx?ProductName=vNeck"><img src="/Images/testFile.jpg" alt="Show this" style="width:40%; height:40%; position:relative" /></a>
+                                                   <a href="ProductDetails.aspx?ProductName=vNeck&CategoryID=1"><img src="/Images/testFile.jpg" alt="Show this" style="width:40%; height:40%; position:relative" /></a>
                                                 </li>
                                                 <li><p style="text-align:center;color:black">Hold \n R100</p></li>
                                             </ul>
@@ -125,7 +123,7 @@
                         </div>
                             <!--second style-->
                         <div class="homeDropdown">
-                            <button class="homebtn" ><a href="ProductShow.aspx?CategoryID=2">Homeware</a></button>
+                            <a class="homebtn" href="ProductShow.aspx?CategoryID=2">Houseware</a>
                             <div class="homeDropdown-content" >
                                  <table>
                                     <tr>
@@ -172,7 +170,7 @@
                             </div>
                         </div>
                         <div class="stationaryDropdown">
-                            <button class="statbtn" ><a href="ProductShow.aspx?CategoryID=3">Stationery</a></button>
+                            <a class="statbtn" href="ProductShow.aspx?CategoryID=3">Stationery</a>
                             <div class="stationaryDropdown-content" >
                                  <table>
                                     <tr>
@@ -219,7 +217,7 @@
                             </div>
                         </div>
                         <div class="genDropdown">
-                            <button class="genbtn" ><a href="ProductShow.aspx?CategoryID=4">General</a></button>
+                            <a class="genbtn" href="ProductShow.aspx?CategoryID=4">Specials</a>
                             <div class="genDropdown-content" >
                                 <table>
                                     <tr>
@@ -248,7 +246,8 @@
                                                 </li>
                                                 <li> <p style="text-align:center;color:black">Hold \n R100</p></li>
                                             </ul>
-                                   
+                                   <li><a runat="server" href="~/ShoppingCart"
+ID="cartCount">&nbsp;</a></li>
 
                                         </td>
                                          <td style="width:30%; "> 
@@ -266,11 +265,14 @@
                             </div>
                         </div>
                         <a runat="server" href="~/Contact">Contact</a>
+                        <div class="searchContainer">
+                            <asp:TextBox runat="server" Text="" ID="productSearchText"></asp:TextBox>
+                            <asp:Button runat="server" ID ="productSearchButton" Text="Search" onClick="getSearch" /> 
+                        </div>
                     </div>
             
                 </div>
-            </ItemTemplate>
-         </asp:FormView>
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
@@ -312,7 +314,7 @@
                             <td>
                                 <ul style="list-style-type: none;">
                                     <li><h3>Useful links</h3></li>
-                                    <li>set</li>
+                                    <li><a href="~/reviews.aspx" >Reviews</a></li>
                                     <li>set</li>
                                     <li>est</li>
                                 </ul>
@@ -324,6 +326,14 @@
                                     <li>set</li>
                                     <li>set</li>
                                     <li>ste</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul style="list-style-type:none;">
+                                    <li><h3>Newsletter</h3></li>
+                                    <li>Sign up to the news letter</li>
+                                    <li><asp:Textbox ID="newsletterTextbox" runat="server" ></asp:Textbox></li>
+                                    <li><asp:Button Text="Sign up" runat="server" /></li>
                                 </ul>
                             </td>
                         </tr>

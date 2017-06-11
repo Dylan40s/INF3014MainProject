@@ -1,9 +1,7 @@
-﻿using System;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+
 namespace MainProject.Models
 {
     public class Order
@@ -39,7 +37,8 @@ namespace MainProject.Models
         public string Phone { get; set; }
         [Required(ErrorMessage = "Email Address is required")]
         [DisplayName("Email Address")]
-        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}",ErrorMessage = "Email is is not valid.")]
+        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}",
+        ErrorMessage = "Email is is not valid.")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
         [ScaffoldColumn(false)]

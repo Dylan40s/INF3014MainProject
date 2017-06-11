@@ -17,31 +17,55 @@ namespace MainProject
 
         }
 
-      /* public IQueryable<Product> GetProduct([QueryString("ProductID")] int? productId)
-        {
-            var _db = new MainProject.Models.ProductContext();
-            IQueryable<Product> query = _db.Products;
-            if (productId.HasValue && productId > 0)
-            {
-                query = query.Where(p => p.ProductID == productId);
-            }
-           
-            return query;
-        }*/
+        /* public IQueryable<Product> GetProduct([QueryString("ProductID")] int? productId)
+          {
+              var _db = new MainProject.Models.ProductContext();
+              IQueryable<Product> query = _db.Products;
+              if (productId.HasValue && productId > 0)
+              {
+                  query = query.Where(p => p.ProductID == productId);
+              }
 
-       public IQueryable<Product> GetProduct([QueryString("ProductName")] string productName)
+              return query;
+          }*/
+
+        public IQueryable<Product> GetProduct([QueryString("ProductName")] string productName, [QueryString("Description")] string description)
         {
             var _db = new MainProject.Models.ProductContext();
             IQueryable<Product> query = _db.Products;
             if (!String.IsNullOrEmpty(productName))
             {
                 query = query.Where(p =>
-                String.Compare(p.ProductName, productName) == 0);
+                String.Compare(p.ProductName.ToLower(), productName.ToLower()) == 0);
             }
-            else
+            if (!String.IsNullOrEmpty(description))
             {
-                query = null;
+                query = query.Where(p =>
+                String.Compare(p.Description.ToLower(), description.ToLower()) == 0);
             }
+            /* if (categoryID.HasValue && categoryID > 0)
+             {
+                 Image helpImage = (Image)productDetail.FindControl("imagePlaceHolder");
+                 Label helpLabel = (Label)FindControl("helpText");
+                 switch (categoryID ?? default(int)){
+                     case 1:
+                         helpImage.ImageUrl = "~/Images/clothingHelp.png";
+                         helpLabel.Text = "Clothing examples";
+                         break;
+                     case 2:
+                         helpImage.ImageUrl = "~/Images/housewareHelp.png";
+                         helpLabel.Text = "Houseware examples";
+                         break;
+                     case 3:
+                         helpImage.ImageUrl = "~/Images/stationeryHelp.png";
+                         helpLabel.Text = "Stationery examples";
+                         break;
+                     case 4:
+                         helpImage.ImageUrl = "~/Images/specialsHelp.png";
+                         helpLabel.Text = "Specials examples";
+                         break;
+                 }
+             }*/
             return query;
         }
 
@@ -79,6 +103,36 @@ namespace MainProject
         public void addToCart(object sender, EventArgs e)
         {
 
+        }
+
+        public object helpImageSelect(int categoryID)
+        {
+            if ( categoryID > 0)
+            {
+                Image helpImage = (Image)productDetail.FindControl("helpImage");
+                Label helpLabel = (Label)productDetail.FindControl("helpText");
+                switch (categoryID )
+                {
+                    case 1:
+                        helpImage.ImageUrl = "~/Images/clothingHelp.png";
+                        helpLabel.Text = "Clothing examples";
+                        break;
+                    case 2:
+                        helpImage.ImageUrl = "~/Images/housewareHelp.png";
+                        helpLabel.Text = "Houseware examples";
+                        break;
+                    case 3:
+                        helpImage.ImageUrl = "~/Images/stationeryHelp.png";
+                        helpLabel.Text = "Stationery examples";
+                        break;
+                    case 4:
+                        helpImage.ImageUrl = "~/Images/specialsHelp.png";
+                        helpLabel.Text = "Specials examples";
+                        break;
+                }
+
+            }
+            return this;
         }
     }
 }

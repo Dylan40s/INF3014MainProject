@@ -13,13 +13,31 @@ namespace MainProject {
     public partial class SiteMaster {
         
         /// <summary>
-        /// productDetail control.
+        /// cartCount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView productDetail;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor cartCount;
+        
+        /// <summary>
+        /// productSearchText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox productSearchText;
+        
+        /// <summary>
+        /// productSearchButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button productSearchButton;
         
         /// <summary>
         /// MainContent control.
@@ -29,5 +47,14 @@ namespace MainProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        
+        /// <summary>
+        /// newsletterTextbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox newsletterTextbox;
     }
 }
